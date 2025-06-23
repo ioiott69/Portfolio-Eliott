@@ -85,7 +85,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: #000000;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./src/images/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
             position: relative;
             overflow: hidden;
@@ -98,7 +100,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 70%);
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 70%);
         }
         
         .hero-content {
@@ -197,10 +199,18 @@
             line-height: 1.7;
         }
         
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
+            margin-top: 2rem;
         }
         
         .skill-item {
@@ -210,16 +220,39 @@
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .skill-item:hover {
             transform: translateY(-5px);
         }
         
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 0.5rem;
+            background: var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
         .skill-item h4 {
             font-size: 0.9rem;
             font-weight: 600;
             margin-top: 0.5rem;
+        }
+        
+        .skill-item p {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            margin: 0;
         }
         
         /* Projects Section */
@@ -245,13 +278,47 @@
         
         .project-image {
             height: 250px;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            background-size: cover;
+            background-position: center;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary-color);
+            color: white;
             font-size: 0.9rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-image span {
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+        }
+        
+        .apartment-bg {
+            background-image: url('./src/images/st-etienne-cuisine-salon.jpg');
+        }
+        
+        .diving-bg {
+            background-image: url('./src/images/plongee-vue-ensemble.jpg');
+        }
+        
+        .house-bg {
+            background-image: url('./src/images/biarritz-facade-basque.jpg');
+        }
+        
+        .restaurant-bg {
+            background-image: url('./src/images/restaurant-vue-ensemble-bar.jpg');
         }
         
         .project-content {
@@ -326,21 +393,29 @@
             animation: modalSlideIn 0.3s ease-out;
         }
         
-        /* Project-specific modal headers */
+        /* Project-specific modal headers avec VOS VRAIES IMAGES */
         #apartment-modal .modal-header {
-            background: linear-gradient(135deg, #8FBC8F 0%, #98D982 50%, #F5F5DC 100%);
+            background: linear-gradient(135deg, rgba(139, 188, 143, 0.8), rgba(152, 217, 130, 0.8)), url('./src/images/st-etienne-salon-verriere.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         #diving-shop-modal .modal-header {
-            background: linear-gradient(135deg, #1E90FF 0%, #00CED1 50%, #4682B4 100%);
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.8), rgba(0, 206, 209, 0.8)), url('./src/images/plongee-aquarium-central.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         #family-house-modal .modal-header {
-            background: linear-gradient(135deg, #228B22 0%, #DC143C 50%, #F5DEB3 100%);
+            background: linear-gradient(135deg, rgba(34, 139, 34, 0.8), rgba(220, 20, 60, 0.8)), url('./src/images/biarritz-salon-cheminee.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         #restaurant-modal .modal-header {
-            background: linear-gradient(135deg, #CD853F 0%, #D2691E 50%, #F4A460 100%);
+            background: linear-gradient(135deg, rgba(205, 133, 63, 0.8), rgba(210, 105, 30, 0.8)), url('./src/images/restaurant-salle-banquettes.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         .modal-header {
@@ -391,7 +466,6 @@
         
         .project-subtitle {
             font-size: 1.3rem;
-            color: var(--secondary-color);
             text-align: center;
             margin-bottom: 3rem;
         }
@@ -449,15 +523,149 @@
         
         .gallery-item {
             height: 200px;
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary-color);
+            color: white;
             font-size: 0.9rem;
             text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
+        
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+        }
+        
+        .gallery-item span {
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Image Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: lightboxZoomIn 0.3s ease-out;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        
+        @keyframes lightboxZoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .st-etienne-plan { 
+            background-image: url('./src/images/st-etienne-plan.jpg');
+        }
+        .st-etienne-moodboard { 
+            background-image: url('./src/images/st-etienne-moodboard.jpg');
+        }
+        .st-etienne-salon { 
+            background-image: url('./src/images/st-etienne-details-salon.jpg');
+        }
+        .st-etienne-cuisine { 
+            background-image: url('./src/images/st-etienne-cuisine-salon.jpg');
+        }
+        .st-etienne-living { 
+            background-image: url('./src/images/st-etienne-salon-verriere.jpg');
+        }
+        
+        /* Gallery item backgrounds - Restaurant Marseille */
+        .restaurant-axono { background-image: url('./src/images/restaurant-axonometrie.jpg'); }
+        .restaurant-moodboard { background-image: url('./src/images/restaurant-moodboard.jpg'); }
+        .restaurant-salle { background-image: url('./src/images/restaurant-salle-banquettes.jpg'); }
+        .restaurant-bar { background-image: url('./src/images/restaurant-vue-ensemble-bar.jpg'); }
+        .restaurant-facade { background-image: url('./src/images/restaurant-facade-devanture.jpg'); }
+        .restaurant-croquis { background-image: url('./src/images/restaurant-croquis-banquettes.jpg'); }
+        
+        /* Gallery item backgrounds - Maison Biarritz */
+        .biarritz-facade { background-image: url('./src/images/biarritz-facade-basque.jpg'); }
+        .biarritz-moodboard { background-image: url('./src/images/biarritz-moodboard.jpg'); }
+        .biarritz-salon { background-image: url('./src/images/biarritz-salon-cheminee.jpg'); }
+        .biarritz-cuisine { background-image: url('./src/images/biarritz-cuisine-salle-manger.jpg'); }
+        .biarritz-espace-vie { background-image: url('./src/images/biarritz-espace-vie.jpg'); }
+        
+        /* Gallery item backgrounds - Boutique Plongée */
+        .plongee-plan { background-image: url('./src/images/plongee-axonometrique.jpg'); }
+        .plongee-moodboard { background-image: url('./src/images/plongee-moodboard.jpg'); }
+        .plongee-vue-ensemble { background-image: url('./src/images/plongee-vue-ensemble.jpg'); }
+        .plongee-bouteilles { background-image: url('./src/images/plongee-zone-bouteilles.jpg'); }
+        .plongee-aquarium { background-image: url('./src/images/plongee-aquarium-central.jpg'); }
+        
+        /* Gallery item backgrounds par défaut */
+        .gallery-plan { background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .gallery-3d { background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .gallery-kitchen { background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .gallery-materials { background-image: url('https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .gallery-ambiance { background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        .gallery-render { background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
         
         /* Experience Section */
         .experience-timeline {
@@ -666,6 +874,11 @@
             .modal-content {
                 margin: 20px 0;
             }
+            
+            .profile-image {
+                width: 250px;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -692,7 +905,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+        <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title fade-in">À propos</h2>
@@ -741,7 +954,7 @@
             <div class="projects-grid">
                 <!-- Projet Appartement Saint-Étienne -->
                 <div class="project-card fade-in" onclick="openProject('apartment')">
-                    <div class="project-image">
+                    <div class="project-image apartment-bg">
                         <span>Appartement Étudiant - Saint-Étienne</span>
                     </div>
                     <div class="project-content">
@@ -759,7 +972,7 @@
                 
                 <!-- Projet Boutique Plongée -->
                 <div class="project-card fade-in" onclick="openProject('diving-shop')">
-                    <div class="project-image">
+                    <div class="project-image diving-bg">
                         <span>Boutique de Plongée - Lyon</span>
                     </div>
                     <div class="project-content">
@@ -776,7 +989,7 @@
                 
                 <!-- Projet Maison Biarritz -->
                 <div class="project-card fade-in" onclick="openProject('family-house')">
-                    <div class="project-image">
+                    <div class="project-image house-bg">
                         <span>Maison Familiale - Biarritz</span>
                     </div>
                     <div class="project-content">
@@ -793,7 +1006,7 @@
                 
                 <!-- Projet Restaurant Marseille -->
                 <div class="project-card fade-in" onclick="openProject('restaurant')">
-                    <div class="project-image">
+                    <div class="project-image restaurant-bg">
                         <span>Restaurant - Marseille</span>
                     </div>
                     <div class="project-content">
@@ -863,14 +1076,17 @@
                 </div>
 
                 <div class="project-gallery">
-                    <h3>Galerie du projet</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">Plan état existant</div>
-                        <div class="gallery-item">Plan projet aménagement</div>
-                        <div class="gallery-item">Vue 3D salon avec verrière</div>
-                        <div class="gallery-item">Vue 3D cuisine équipée</div>
-                        <div class="gallery-item">Moodboard matériaux</div>
-                        <div class="gallery-item">Rendu final ambiance zen</div>
+                        <div class="gallery-item st-etienne-plan" onclick="openLightbox('./src/images/st-etienne-plan.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-moodboard" onclick="openLightbox('./src/images/st-etienne-moodboard.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-salon" onclick="openLightbox('./src/images/st-etienne-details-salon.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-cuisine" onclick="openLightbox('./src/images/st-etienne-cuisine-salon.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-living" onclick="openLightbox('./src/images/st-etienne-salon-verriere.jpg')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -919,14 +1135,17 @@
                 </div>
 
                 <div class="project-gallery">
-                    <h3>Galerie du projet</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">Plan d'aménagement cellule</div>
-                        <div class="gallery-item">Vue axonométrique</div>
-                        <div class="gallery-item">Ambiance dégradé bleu</div>
-                        <div class="gallery-item">Zone équipement plongée</div>
-                        <div class="gallery-item">Moodboard fonds marins</div>
-                        <div class="gallery-item">Rendu immersif final</div>
+                        <div class="gallery-item plongee-plan" onclick="openLightbox('./src/images/plongee-axonometrique.jpg')">
+                        </div>
+                        <div class="gallery-item plongee-moodboard" onclick="openLightbox('./src/images/plongee-moodboard.jpg')">
+                        </div>
+                        <div class="gallery-item plongee-vue-ensemble" onclick="openLightbox('./src/images/plongee-vue-ensemble.jpg')">
+                        </div>
+                        <div class="gallery-item plongee-bouteilles" onclick="openLightbox('./src/images/plongee-zone-bouteilles.jpg')">
+                        </div>
+                        <div class="gallery-item plongee-aquarium" onclick="openLightbox('./src/images/plongee-aquarium-central.jpg')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -983,14 +1202,17 @@
                 </div>
 
                 <div class="project-gallery">
-                    <h3>Galerie du projet</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">Plans avant/après extension</div>
-                        <div class="gallery-item">Vue 3D façade basque</div>
-                        <div class="gallery-item">Salon vue océan</div>
-                        <div class="gallery-item">Cuisine linéaire sur mesure</div>
-                        <div class="gallery-item">Moodboard matériaux basques</div>
-                        <div class="gallery-item">Ambiances jour/nuit</div>
+                        <div class="gallery-item biarritz-facade" onclick="openLightbox('./src/images/biarritz-facade-basque.jpg')">
+                        </div>
+                        <div class="gallery-item biarritz-moodboard" onclick="openLightbox('./src/images/biarritz-moodboard.jpg')">
+                        </div>
+                        <div class="gallery-item biarritz-salon" onclick="openLightbox('./src/images/biarritz-salon-cheminee.jpg')">
+                        </div>
+                        <div class="gallery-item biarritz-cuisine" onclick="openLightbox('./src/images/biarritz-cuisine-salle-manger.jpg')">
+                        </div>
+                        <div class="gallery-item biarritz-espace-vie" onclick="openLightbox('./src/images/biarritz-espace-vie.jpg')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1046,14 +1268,19 @@
                 </div>
 
                 <div class="project-gallery">
-                    <h3>Galerie du projet</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">Plan d'aménagement local</div>
-                        <div class="gallery-item">Vue d'ensemble salle</div>
-                        <div class="gallery-item">Banquettes terre cuite</div>
-                        <div class="gallery-item">Bar enduit à la chaux</div>
-                        <div class="gallery-item">Moodboard matériaux</div>
-                        <div class="gallery-item">Ambiance méditerranéenne</div>
+                        <div class="gallery-item restaurant-axono" onclick="openLightbox('./src/images/restaurant-axonometrie.jpg')">
+                        </div>
+                        <div class="gallery-item restaurant-moodboard" onclick="openLightbox('./src/images/restaurant-moodboard.jpg')">
+                        </div>
+                        <div class="gallery-item restaurant-salle" onclick="openLightbox('./src/images/restaurant-salle-banquettes.jpg')">
+                        </div>
+                        <div class="gallery-item restaurant-bar" onclick="openLightbox('./src/images/restaurant-vue-ensemble-bar.jpg')">
+                        </div>
+                        <div class="gallery-item restaurant-facade" onclick="openLightbox('./src/images/restaurant-facade-devanture.jpg')">
+                        </div>
+                        <div class="gallery-item restaurant-croquis" onclick="openLightbox('./src/images/restaurant-croquis-banquettes.jpg')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1074,7 +1301,7 @@
                 <div class="timeline-item fade-in">
                     <h3>Stage Architecture d'intérieur / Cuisiniste</h3>
                     <div class="company">Les Cuisines de Marines</div>
-                    <div class="date">Juin - Juillet 2024</div>
+                    <div class="date">2024 - 2025</div>
                     <p>RDV clients, réalisation de mobilier sur mesure, utilisation de SketchUp et Twinmotion pour projets. Visite de chantiers et réunions de chantier.</p>
                 </div>
                 <div class="timeline-item fade-in">
@@ -1129,6 +1356,12 @@
             <p>&copy; 2024 Eliott Buchaille. "Architecture is just art we live in"</p>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    </div>
 
     <script>
         // Smooth scrolling
@@ -1205,8 +1438,28 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeProject();
+                closeLightbox();
             }
         });
+
+        // Lightbox functions
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            lightboxImage.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Stop propagation to prevent modal from closing
+            event.stopPropagation();
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
