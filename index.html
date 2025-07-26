@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head><script type='text/javascript' src='https://mail.univ-lyon1.fr/UpqDX1AZHrgWKniQaIoB8X_OJ2Glcda_C93HARdkWgq-fKVkWlCeUxgMoouDBajhWJbt7oEY1iB7F961FZHuXw=='></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliott Buchaille - Architecture d'intérieur & Design</title>
+    <!-- <link rel="icon" href="chemin/vers/le-logo.ico" type="image/x-icon"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
@@ -305,8 +306,8 @@
             font-weight: 600;
         }
         
-        .apartment-bg {
-            background-image: url('./src/images/st-etienne-cuisine-salon.jpg');
+        .drive-drink-bg {
+            background-image: url('./src/images/3d_espace_principal.png');
         }
         
         .diving-bg {
@@ -394,8 +395,8 @@
         }
         
         /* Project-specific modal headers avec VOS VRAIES IMAGES */
-        #apartment-modal .modal-header {
-            background: linear-gradient(135deg, rgba(139, 188, 143, 0.8), rgba(152, 217, 130, 0.8)), url('./src/images/st-etienne-salon-verriere.jpg');
+        #drive-drink-modal .modal-header {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.8), rgba(0, 0, 0, 0.8)), url('./src/images/rendu_espace_principal.png');
             background-size: cover;
             background-position: center;
         }
@@ -621,22 +622,6 @@
             }
         }
         
-        .st-etienne-plan { 
-            background-image: url('./src/images/st-etienne-plan.jpg');
-        }
-        .st-etienne-moodboard { 
-            background-image: url('./src/images/st-etienne-moodboard.jpg');
-        }
-        .st-etienne-salon { 
-            background-image: url('./src/images/st-etienne-details-salon.jpg');
-        }
-        .st-etienne-cuisine { 
-            background-image: url('./src/images/st-etienne-cuisine-salon.jpg');
-        }
-        .st-etienne-living { 
-            background-image: url('./src/images/st-etienne-salon-verriere.jpg');
-        }
-        
         /* Gallery item backgrounds - Restaurant Marseille */
         .restaurant-axono { background-image: url('./src/images/restaurant-axonometrie.jpg'); }
         .restaurant-moodboard { background-image: url('./src/images/restaurant-moodboard.jpg'); }
@@ -659,13 +644,14 @@
         .plongee-bouteilles { background-image: url('./src/images/plongee-zone-bouteilles.jpg'); }
         .plongee-aquarium { background-image: url('./src/images/plongee-aquarium-central.jpg'); }
         
-        /* Gallery item backgrounds par défaut */
-        .gallery-plan { background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
-        .gallery-3d { background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
-        .gallery-kitchen { background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
-        .gallery-materials { background-image: url('https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
-        .gallery-ambiance { background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
-        .gallery-render { background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); }
+        /* Gallery item backgrounds - Drive and Drink */
+        .moodboard { background-image: url('./src/images/moodboard_projet.png'); }
+        .plan-amenagement-couleur { background-image: url('./src/images/plan_d_amenagement_couleur.png'); }
+        .axonometrie-projet { background-image: url('./src/images/axonometrie_projet.png'); }
+        .espace-principal { background-image: url('./src/images/epsace_principal.png'); }
+        .rendu-espace-principal { background-image: url('./src/images/rendu_espace_principal.png'); }
+        .rendu-espace-bar { background-image: url('./src/images/rendu_espace_bar.png'); }
+        .rendu-cinema { background-image: url('./src/images/rendu_cinema.png'); }
         
         /* Experience Section */
         .experience-timeline {
@@ -941,6 +927,10 @@
                         <h4>Photoshop</h4>
                         <p>Retouche & Design</p>
                     </div>
+                    <div class="skill-item">
+                        <h4>InDesign</h4>
+                        <p>Mise en page</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -952,20 +942,20 @@
             <h2 class="section-title fade-in">Projets</h2>
             <p class="section-subtitle fade-in">Découvrez une sélection de mes réalisations en architecture d'intérieur et design</p>
             <div class="projects-grid">
-                <!-- Projet Appartement Saint-Étienne -->
-                <div class="project-card fade-in" onclick="openProject('apartment')">
-                    <div class="project-image apartment-bg">
-                        <span>Appartement Étudiant - Saint-Étienne</span>
+                <!-- Projet Drive and Drink -->
+                <div class="project-card fade-in" onclick="openProject('drive-drink')">
+                    <div class="project-image rendu-espace-principal">
+                        <span>Drive and Drink - Vénissieux</span>
                     </div>
                     <div class="project-content">
-                        <h3>Rénovation Appartement Étudiant</h3>
-                        <div class="project-meta">33 m² • Saint-Étienne • Décembre 2023 - Janvier 2024</div>
-                        <p><strong>Projet de groupe</strong> - Rénovation d'un appartement étudiant pour deux personnes avec une ambiance apaisante et un espace optimisé. Installation d'une verrière pour maximiser la lumière naturelle.</p>
+                        <h3>Drive and Drink</h3>
+                        <div class="project-meta">350 m² • Vénissieux • Novembre 2024 - Avril 2025</div>
+                        <p>Bar immersif inspiré de l'univers de la Formule 1, combinant simulation, détente et spectacle. Chaque zone incarne une étape de la course avec matériaux industriels et palette rouge/noir/gris.</p>
                         <div class="project-tags">
-                            <span class="tag group-project">Projet de groupe</span>
-                            <span class="tag">SketchUp</span>
-                            <span class="tag">V-Ray</span>
-                            <span class="tag">Photoshop</span>
+                            <span class="tag">Projet libre 3A</span>
+                            <span class="tag">Bar immersif</span>
+                            <span class="tag">Formule 1</span>
+                            <span class="tag">ERP</span>
                         </div>
                     </div>
                 </div>
@@ -1026,14 +1016,14 @@
     </section>
 
     <!-- Project Modals -->
-    <!-- Modal Appartement Saint-Étienne -->
-    <div id="apartment-modal" class="project-modal">
+    <!-- Modal Drive and Drink -->
+    <div id="drive-drink-modal" class="project-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <button class="close-modal" onclick="closeProject()">&times;</button>
                 <div>
-                    <h1 class="project-title">Appartement Étudiant</h1>
-                    <p class="project-subtitle">Saint-Étienne • 33 m² • Projet de groupe</p>
+                    <h1 class="project-title">Drive and Drink</h1>
+                    <p class="project-subtitle">Vénissieux • 350 m² • Projet libre de 3ème année</p>
                 </div>
             </div>
             <div class="modal-body">
@@ -1041,51 +1031,61 @@
                     <div class="detail-section">
                         <h3>Informations du projet</h3>
                         <ul class="detail-list">
-                            <li><strong>Surface :</strong> <span>33 m²</span></li>
-                            <li><strong>Lieu :</strong> <span>42100 Saint-Étienne</span></li>
-                            <li><strong>Date :</strong> <span>Décembre 2023 - Janvier 2024</span></li>
-                            <li><strong>Type :</strong> <span>Projet de groupe - Cas réel</span></li>
-                            <li><strong>Adresse :</strong> <span>Rue basse des Rives</span></li>
+                            <li><strong>Surface :</strong> <span>350 m²</span></li>
+                            <li><strong>Lieu :</strong> <span>69200 Vénissieux</span></li>
+                            <li><strong>Date :</strong> <span>Novembre 2024 - Avril 2025</span></li>
+                            <li><strong>Type :</strong> <span>Projet libre de 3ème année - ERP</span></li>
+                            <li><strong>Adresse :</strong> <span>Rue des frères Louis et Emile Bertrand</span></li>
                             <li><strong>Logiciels :</strong> <span>SketchUp, V-Ray, Photoshop</span></li>
                         </ul>
                     </div>
                     <div class="detail-section">
-                        <h3>Concept & Objectifs</h3>
-                        <p>Rénovation d'un appartement étudiant conçu pour accueillir deux personnes. L'ambiance est pensée pour être apaisante, créant un environnement propice à la détente et aux études.</p>
-                        <p><strong>Localisation stratégique :</strong> Situé dans un quartier dynamique, proche de l'Université Jean Monnet, attirant une population étudiante. Bien desservi par les transports en commun.</p>
+                        <h3>Concept & Inspiration</h3>
+                        <p>Drive and Drink est un bar immersif inspiré de l'univers de la Formule 1, combinant simulation, détente et spectacle. Chaque zone incarne une étape de la course : départ, paddock, tribunes, ligne d'arrivée.</p>
+                        <p><strong>Localisation stratégique :</strong> Implanté à Vénissieux, dans une zone industrielle dynamique en périphérie lyonnaise. Proche du périphérique et de nombreux concessionnaires auto/moto, le site attire naturellement les passionnés.</p>
                     </div>
                 </div>
                 
                 <div class="detail-section">
                     <h3>Stratégie design</h3>
-                    <p><strong>Aménagement central :</strong> L'appartement est aménagé autour d'une pièce de vie comprenant un canapé deux places et une cuisine équipée, offrant un espace convivial et fonctionnel.</p>
-                    <p><strong>Optimisation lumière :</strong> Le salon est agrémenté d'une grande baie vitrée qui apporte lumière naturelle, illuminant l'ensemble de l'espace.</p>
-                    <p><strong>Verrière innovante :</strong> Pour maximiser cette lumière et créer un jeu subtil de reflets, une verrière a été installée entre la chambre et la pièce de vie, permettant à la lumière de circuler librement.</p>
-                    <p><strong>Concept global :</strong> L'aménagement s'articule autour d'une composition verticale et d'un jeu de lumières et de reflets, créant une ambiance apaisante et zen.</p>
+                    <p><strong>Immersion progressive :</strong> Le tout repose sur une immersion progressive dans l'univers de la Formule 1, à travers une narration spatiale claire et rythmée.</p>
+                    <p><strong>Aménagement circuit :</strong> L'aménagement est structuré comme un circuit : chaque zone (simulateurs, bar, lounge, cinéma) représente une étape de la course, avec une fluidité de circulation pensée pour renforcer l'expérience.</p>
+                    <p><strong>Éclairage dynamique :</strong> La lumière joue un rôle clé dans l'ambiance, avec des LED, néons et jeux de reflets sur surfaces métalliques pour évoquer les stands, les feux de départ ou l'asphalte éclairé la nuit.</p>
                 </div>
 
                 <div class="detail-section">
                     <h3>Concept décoratif</h3>
-                    <p><strong>Ambiance zen et naturelle :</strong> Chaque élément est choisi pour favoriser le calme et l'harmonie. Le bois clair apporte une touche chaleureuse et organique.</p>
+                    <p><strong>Univers brut et technique :</strong> Le concept décoratif puise son inspiration dans l'univers brut et technique de la Formule 1. L'espace reprend les codes esthétiques des paddocks et circuits.</p>
                     <p><strong>Matériaux sélectionnés :</strong></p>
-                    <p>• Bois clair pour la chaleur et l'aspect organique<br>
-                    • Verre pour créer des jeux de transparence<br>
-                    • Métal noir en touches discrètes pour la modernité<br>
-                    • Couleurs naturelles : blanc, beige et vert thé</p>
-                    <p>L'ensemble renforce cette atmosphère douce et apaisante, invitant à la sérénité et au bien-être dans cet espace étudiant optimisé.</p>
+                    <p>• Matériaux industriels avec lignes graphiques au sol<br>
+                    • Éclairages dynamiques et ambiances contrastées<br>
+                    • Palette rouge vif, noir profond, gris métallisé<br>
+                    • Surfaces métalliques pour reflets et dynamisme</p>
+                    <p>L'ensemble crée une atmosphère immersive, à mi-chemin entre garage haute performance et lieu de vie contemporain, où chaque détail contribue à faire vivre l'expérience du pilote.</p>
                 </div>
 
                 <div class="project-gallery">
                     <div class="gallery-grid">
-                        <div class="gallery-item st-etienne-plan" onclick="openLightbox('./src/images/st-etienne-plan.jpg')">
+                        <div class="gallery-item moodboard" onclick="openLightbox('./src/images/moodboard_projet.png')">
+                            <span>Moodboard</span>
                         </div>
-                        <div class="gallery-item st-etienne-moodboard" onclick="openLightbox('./src/images/st-etienne-moodboard.jpg')">
+                        <div class="gallery-item plan-amenagement-couleur" onclick="openLightbox('./src/images/plan_d_amenagement_couleur.png')">
+                            <span>Plan d'aménagement</span>
                         </div>
-                        <div class="gallery-item st-etienne-salon" onclick="openLightbox('./src/images/st-etienne-details-salon.jpg')">
+                        <div class="gallery-item axonometrie-projet" onclick="openLightbox('./src/images/axonometrie_projet.png')">
+                            <span>Axonométrie projet</span>
                         </div>
-                        <div class="gallery-item st-etienne-cuisine" onclick="openLightbox('./src/images/st-etienne-cuisine-salon.jpg')">
+                        <div class="gallery-item espace-principal" onclick="openLightbox('./src/images/epsace_principal.png')">
+                            <span>Espace principal</span>
                         </div>
-                        <div class="gallery-item st-etienne-living" onclick="openLightbox('./src/images/st-etienne-salon-verriere.jpg')">
+                        <div class="gallery-item rendu-espace-principal" onclick="openLightbox('./src/images/rendu_espace_principal.png')">
+                            <span>Rendu epace principal</span>
+                        </div>
+                        <div class="gallery-item rendu-espace-bar" onclick="openLightbox('./src/images/rendu_espace_bar.png')">
+                            <span>Rendu espace bar</span>
+                        </div>
+                        <div class="gallery-item rendu-cinema" onclick="openLightbox('./src/images/rendu_cinema.png')">
+                            <span>Rendu espace cinema</span>
                         </div>
                     </div>
                 </div>
@@ -1297,6 +1297,12 @@
                     <div class="company">CREAD, Lyon</div>
                     <div class="date">2022 - 2027</div>
                     <p>Formation en architecture d'intérieur & design global. Titre RNCP de niveau 7. Spécialisation en modélisation 3D et conception d'espaces.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <h3>Stage en agence d'architecture d'intérieur</h3>
+                    <div class="company">LAR_chitect</div>
+                    <div class="date">Mai 2025 - Juin 2025</div>
+                    <p>Utilisation des logiciels : InDesign, SketchUp, V-ray, ArchiCAD, AutoCAD. Réalisations de suivis de chantier/ Rendez vous clients. Réalisations de relevés métrés, prises de côte.</p>
                 </div>
                 <div class="timeline-item fade-in">
                     <h3>Stage Architecture d'intérieur / Cuisiniste</h3>
