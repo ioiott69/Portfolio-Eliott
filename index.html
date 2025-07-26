@@ -321,6 +321,10 @@
         .restaurant-bg {
             background-image: url('./src/images/restaurant-vue-ensemble-bar.jpg');
         }
+
+        .apartment-bg {
+            background-image: url('./src/images/st-etienne-cuisine-salon.jpg');
+        }
         
         .project-content {
             padding: 1.5rem;
@@ -415,6 +419,12 @@
         
         #restaurant-modal .modal-header {
             background: linear-gradient(135deg, rgba(205, 133, 63, 0.8), rgba(210, 105, 30, 0.8)), url('./src/images/restaurant-salle-banquettes.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #apartment-modal .modal-header {
+            background: linear-gradient(135deg, rgba(139, 188, 143, 0.8), rgba(152, 217, 130, 0.8)), url('./src/images/st-etienne-salon-verriere.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -652,6 +662,13 @@
         .rendu-espace-principal { background-image: url('./src/images/rendu_espace_principal.png'); }
         .rendu-espace-bar { background-image: url('./src/images/rendu_espace_bar.png'); }
         .rendu-cinema { background-image: url('./src/images/rendu_cinema.png'); }
+
+        /* Gallery item backgrounds - Apartement */
+        .st-etienne-plan { background-image: url('./src/images/st-etienne-plan.jpg'); }
+        .st-etienne-moodboard { background-image: url('./src/images/st-etienne-moodboard.jpg'); }
+        .st-etienne-salon { background-image: url('./src/images/st-etienne-details-salon.jpg'); }
+        .st-etienne-cuisine { background-image: url('./src/images/st-etienne-cuisine-salon.jpg'); }
+        .st-etienne-living { background-image: url('./src/images/st-etienne-salon-verriere.jpg'); }
         
         /* Experience Section */
         .experience-timeline {
@@ -1011,6 +1028,24 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Projet Appartement Saint-Étienne -->
+                <div class="project-card fade-in" onclick="openProject('apartment')">
+                    <div class="project-image apartment-bg">
+                        <span>Appartement Étudiant - Saint-Étienne</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Rénovation Appartement Étudiant</h3>
+                        <div class="project-meta">33 m² • Saint-Étienne • Décembre 2023 - Janvier 2024</div>
+                        <p><strong>Projet de groupe</strong> - Rénovation d'un appartement étudiant pour deux personnes avec une ambiance apaisante et un espace optimisé. Installation d'une verrière pour maximiser la lumière naturelle.</p>
+                        <div class="project-tags">
+                            <span class="tag group-project">Projet de groupe</span>
+                            <span class="tag">SketchUp</span>
+                            <span class="tag">V-Ray</span>
+                            <span class="tag">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1280,6 +1315,73 @@
                         <div class="gallery-item restaurant-facade" onclick="openLightbox('./src/images/restaurant-facade-devanture.jpg')">
                         </div>
                         <div class="gallery-item restaurant-croquis" onclick="openLightbox('./src/images/restaurant-croquis-banquettes.jpg')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Appartement Saint-Étienne -->
+    <div id="apartment-modal" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeProject()">&times;</button>
+                <div>
+                    <h1 class="project-title">Appartement Étudiant</h1>
+                    <p class="project-subtitle">Saint-Étienne • 33 m² • Projet de groupe</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h3>Informations du projet</h3>
+                        <ul class="detail-list">
+                            <li><strong>Surface :</strong> <span>33 m²</span></li>
+                            <li><strong>Lieu :</strong> <span>42100 Saint-Étienne</span></li>
+                            <li><strong>Date :</strong> <span>Décembre 2023 - Janvier 2024</span></li>
+                            <li><strong>Type :</strong> <span>Projet de groupe - Cas réel</span></li>
+                            <li><strong>Adresse :</strong> <span>Rue basse des Rives</span></li>
+                            <li><strong>Logiciels :</strong> <span>SketchUp, V-Ray, Photoshop</span></li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Concept & Objectifs</h3>
+                        <p>Rénovation d'un appartement étudiant conçu pour accueillir deux personnes. L'ambiance est pensée pour être apaisante, créant un environnement propice à la détente et aux études.</p>
+                        <p><strong>Localisation stratégique :</strong> Situé dans un quartier dynamique, proche de l'Université Jean Monnet, attirant une population étudiante. Bien desservi par les transports en commun.</p>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <h3>Stratégie design</h3>
+                    <p><strong>Aménagement central :</strong> L'appartement est aménagé autour d'une pièce de vie comprenant un canapé deux places et une cuisine équipée, offrant un espace convivial et fonctionnel.</p>
+                    <p><strong>Optimisation lumière :</strong> Le salon est agrémenté d'une grande baie vitrée qui apporte lumière naturelle, illuminant l'ensemble de l'espace.</p>
+                    <p><strong>Verrière innovante :</strong> Pour maximiser cette lumière et créer un jeu subtil de reflets, une verrière a été installée entre la chambre et la pièce de vie, permettant à la lumière de circuler librement.</p>
+                    <p><strong>Concept global :</strong> L'aménagement s'articule autour d'une composition verticale et d'un jeu de lumières et de reflets, créant une ambiance apaisante et zen.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Concept décoratif</h3>
+                    <p><strong>Ambiance zen et naturelle :</strong> Chaque élément est choisi pour favoriser le calme et l'harmonie. Le bois clair apporte une touche chaleureuse et organique.</p>
+                    <p><strong>Matériaux sélectionnés :</strong></p>
+                    <p>• Bois clair pour la chaleur et l'aspect organique<br>
+                    • Verre pour créer des jeux de transparence<br>
+                    • Métal noir en touches discrètes pour la modernité<br>
+                    • Couleurs naturelles : blanc, beige et vert thé</p>
+                    <p>L'ensemble renforce cette atmosphère douce et apaisante, invitant à la sérénité et au bien-être dans cet espace étudiant optimisé.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item st-etienne-plan" onclick="openLightbox('./src/images/st-etienne-plan.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-moodboard" onclick="openLightbox('./src/images/st-etienne-moodboard.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-salon" onclick="openLightbox('./src/images/st-etienne-details-salon.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-cuisine" onclick="openLightbox('./src/images/st-etienne-cuisine-salon.jpg')">
+                        </div>
+                        <div class="gallery-item st-etienne-living" onclick="openLightbox('./src/images/st-etienne-salon-verriere.jpg')">
                         </div>
                     </div>
                 </div>
