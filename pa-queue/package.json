@@ -1,0 +1,30 @@
+{
+  "name": "pa-queue",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PA Queue — PWA pour PortAventura (temps d'attente, parcours, push)",
+  "scripts": {
+    "dev": "vite",
+    "dev:worker": "wrangler dev",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "vapid": "node scripts/vapid.mjs",
+    "db:migrate:local": "wrangler d1 migrations apply pa-queue --local",
+    "db:migrate:remote": "wrangler d1 migrations apply pa-queue --remote",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "preact": "^11.0.1"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.63.1",
+    "@cloudflare/workers-types": "^5.20261012.1",
+    "@preact/preset-vite": "^2.10.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4",
+    "wrangler": "^4.149.0"
+  }
+}
