@@ -1,0 +1,5 @@
+# Copie ce fichier en .dev.vars pour le développement local (jamais commité).
+# Génère les valeurs avec : npm run vapid
+VAPID_PUBLIC_KEY=
+VAPID_PRIVATE_KEY=
+VAPID_SUBJECT=mailto:ton-email@exemple.com
